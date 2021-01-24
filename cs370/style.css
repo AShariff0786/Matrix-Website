@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body {
+  background-color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  background: url("memphis-mini.png");
+}
+
+.navbar {
+  background-color: #1AAB8A;
+}
+.btn-operations, .sq-ops {
+  display: none;
+  text-align: center;
+}
+
+.matrix {
+  width: min-content;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.matrix:before,
+.matrix:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 1px solid #000;
+  width: 6px;
+  height: 100%;
+}
+
+.matrix:before {
+  left: -6px;
+  border-right: 0px;
+}
+
+.matrix:after {
+  right: -6px;
+  border-left: 0px;
+}
+
+.matrix td {
+  padding: 5px;
+  text-align: center;
+}
+
+button {
+  background: #1AAB8A;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 35px;
+  font-size: 1.15em;
+  padding: 0 2.5em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  margin: 1em .1em;
+}
+
+button:hover {
+  background: #fff;
+  color: #1AAB8A;
+}
+
+button:before,
+button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #1AAB8A;
+  transition: 400ms ease all;
+}
+
+button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+
+#rows {
+  width: 10em;
+}
+
+#cols {
+  width: 10em;
+}
+
+.input {
+  width: 4em;
+}
+
+.bodySect {
+  margin-top: 2em;
+}
+
+.inputArea {
+  margin-top: 2em;
+  padding: 1em;
+  text-align: center;
+}
+
+.input-group {
+  padding: .5em;
+  margin-top: 1em;
+}
+
+.matrixCont {
+  margin: 2em;
+}
+
+#dim {
+  display: none !important;
+}
+
+.container-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#operation {
+  display: none;
+  align-self: center;
+}
+
+#detMatrix1,#detMatrix2 {
+  text-align: center;
+  margin: 1em;
+  margin-top: 2em;
+}
+
+#scalar1 {
+  margin: 1em;
+}
+
+.up-dw-btns {
+  text-align: center;
+  margin-top: 2em;
+}
+
+#dlArea {
+  display: none;
+  text-align: center;
+}
+
+#howTo {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  margin-top: 3em;
+  padding: 1em 3em;
+  font-size: 1.2em;
+  background: rgb(26, 171, 138, .5);
+  width: max-content;
+}
+

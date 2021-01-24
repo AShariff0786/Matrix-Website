@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="../styling/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <title>Upload Custom Matrix</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="../styling/test.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Matrix Math
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="customMatrix.html">Upload Matrix<span class="sr-only">(current)</span></a>
+                </li>
+        </div>
+    </nav>
+
+    <div class="container-flex-col">
+        <div class="up-dw-btns">
+            Upload first matrix: <input type="file" id="upload1" accept=".json"></input>
+            Upload second matrix: <input type="file" id="upload2" accept=".json"></input>
+        </div>
+    </div>
+    
+
+    <div class="btn-operations">
+		<button type='submit' onclick='addUpload()'>Add</button>
+		<button type='submit' onclick='subUpload()'>Subtract</button>
+		<button type='submit' onclick='multUpload()'>Mutiply</button>
+		<button type='submit' onclick='nextScalar1()'>Scalar Multiplication</button>
+	</div>
+    
+    <div id="'dim" style="display:none">
+        <p>The uploaded matrices number of rows and columns will display here:</p>
+        <input type="text" id="rows" size="100">
+        <input type="text" id="cols" size="100">
+    </div>
+
+    <div class="container-flex">
+        <div id="results"></div>
+		<span id="operation"></span>
+        <div id="matrix2"></div>
+    </div>
+
+    <div id="dlArea">
+        <button id='downloadbtn'>Download</button>
+    </div>
+
+    <div id="howTo">
+        <p>If you are entering matrices that has less than 10 columns or rows, check out our matrix calculator <a href="index.html">here</a>.</p>
+        <p>Please make sure your JSON is formatted the same as the sample below or it won't be able to be read.</p>
+        <img src="../styling/samplematrix.png" alt="sample matrix">
+    </div>
+
+
+    <script src="../scripts/MatrixCalculations.js"></script>
+    <script src="../scripts/website.js"></script>
+    <script src="../scripts/FileSaver.js"></script>
+    <script src="../scripts/upload.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
